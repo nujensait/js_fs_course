@@ -2,15 +2,15 @@
  * Реализовать класс, реализующий хеш-таблицу.
  * Предусмотреть методы поиска, вставки, удаления, изменения элемента и определения количества элементов.
  */
-
 class HashTable {
 
     /**
      * Конструктор
      */
     constructor() {
-        this.table = new Array();
-        this.size = 0;
+        this.table = new Array();   // хеш-таблица
+        this.size = 0;              // размер хеш-таблицы
+        this.keys = [];             // массив хеш-ключей
     }
 
     /**
@@ -44,6 +44,8 @@ class HashTable {
         const index = this.calcHash(key);
         this.table[index] = value;
         this.size++;
+        // добавляем ключ в массив keys
+        this.keys.push(key);
     }
 
     /**
@@ -63,10 +65,10 @@ class HashTable {
      */
     removeElement(key) {
         const index = this.calcHash(key);
-        const value = this.table[index];
-        this.table[index] = undefined;
+        delete this.table[index];
+        const keyIndex = this.keys.indexOf(key);
+        this.keys.splice(keyIndex, 1);
         this.size--;
-        return value;
     }
 
     /**
@@ -91,6 +93,18 @@ class HashTable {
     getSize() {
         return this.size;
     }
+
+    /**
+     * Распечатать элементы таблицы
+     * @param key
+     * @returns {any}
+     */
+    printElements() {
+        for (let key of this.keys) {
+            const index = this.calcHash(key);
+            console.log(key, this.table[index]);
+        }
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -110,6 +124,11 @@ console.log('[ DONE ]\n');
 // Проверяем размер хеш-таблицы
 console.log('[ Getting table size... ]');
 console.log(table.getSize()); // 3
+console.log('[ DONE ]\n');
+
+// Выводим содержимое таблицы
+console.log('[ Getting table contents ... ]');
+table.printElements();
 console.log('[ DONE ]\n');
 
 console.log('[ Read element with key "father"... ]');
@@ -142,6 +161,11 @@ console.log('[ DONE ]\n');
 // Проверяем размер хеш-таблицы
 console.log('[ Getting table size... ]');
 console.log(table.getSize()); // 2
+console.log('[ DONE ]\n');
+
+// Выводим содержимое таблицы
+console.log('[ Getting table contents ... ]');
+table.printElements();
 console.log('[ DONE ]\n');
 
 console.log('[ FINISH ]');
