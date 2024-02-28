@@ -1,6 +1,6 @@
 ## Что это
 
-Домашнее задание по курсу ""
+Домашнее задание по курсу ["JS FullStack (запуск 02.2024)"](https://greenatomcaselab.ispringlearn.ru/content/info/18595)
 Лекция 4: [Базы данных](https://greenatomcaselab.ispringlearn.ru/content/info/18790/from/18610)
 
 ## Задание

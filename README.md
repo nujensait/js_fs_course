@@ -1,5 +1,5 @@
-# About
-JS FullStack course
+# Что это 
+Домашние задания по курсу ["JS FullStack developer (запуск 02.2024)"](https://greenatomcaselab.ispringlearn.ru/content/info/18595)
 
-# Link
+# Ссылки
 https://greenatomcaselab.ispringlearn.ru/content/info/18595

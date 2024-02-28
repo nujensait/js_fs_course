@@ -1,3 +1,8 @@
+## Что это
+
+- Домашнее задание по курсу ["JS FullStack (запуск 02.2024)"](https://greenatomcaselab.ispringlearn.ru/content/info/18595)
+- Лекция 2: [Система контроля версий Git](https://greenatomcaselab.ispringlearn.ru/content/info/18604/from/18595)
+
 ## Задание
 
 **1) Создать сервер на nodejs, который будет возвращать простой html.**
@@ -9,6 +14,11 @@
  
 пример запуска:
 ``` 
+  # login to remote server
+  ssh 90.156.202.37
+  cd /var/www/html
+     
+  # run nodejs app
   apt install nodejs
   node index.js 
 ```
