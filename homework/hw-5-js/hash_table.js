@@ -45,7 +45,6 @@ class HashTable {
     set(key, value) {
         const index = this._hash(key);
         this.table[index] = value;
-        this.size++;
     }
 
     /**
