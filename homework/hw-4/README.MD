@@ -14,6 +14,7 @@
 ## Решение
 Спроектируем БД для "системы управления обучающими курсами".
 
+- редактор схемы: [erd.dbdesigner.net](https://erd.dbdesigner.net/designer/schema/1709128408-untitled) 
 - см. результаты в файле:
 [courses_db.sql](courses_db.sql) 
  
