@@ -1,7 +1,7 @@
 ## Что это
 
-Домашнее задание по курсу ["JS FullStack developer (запуск 02.2024)"](https://greenatomcaselab.ispringlearn.ru/content/info/18595)
-Лекция 5: [JavaScript](https://greenatomcaselab.ispringlearn.ru/content/info/18796/from/18613)
+- Домашнее задание по курсу ["JS FullStack developer (запуск 02.2024)"](https://greenatomcaselab.ispringlearn.ru/content/info/18595)
+- Лекция 5: [JavaScript](https://greenatomcaselab.ispringlearn.ru/content/info/18796/from/18613)
 
 ## Задание
 
