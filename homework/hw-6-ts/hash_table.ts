@@ -108,3 +108,66 @@ class HashTable {
         }
     }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Примеры использования
+
+console.log('[ START ]\n');
+
+const table = new HashTable();
+
+// Создаем новый элемент
+console.log('[ Insert new elements ... ]');
+table.insertElement('father', 'John');
+table.insertElement('son', 'Maikl');
+table.insertElement('mother', 'Mary');
+console.log('[ DONE ]\n');
+
+// Проверяем размер хеш-таблицы
+console.log('[ Getting table size... ]');
+console.log(table.getSize()); // 3
+console.log('[ DONE ]\n');
+
+// Выводим содержимое таблицы
+console.log('[ Getting table contents ... ]');
+table.printElements();
+console.log('[ DONE ]\n');
+
+console.log('[ Read element with key "father"... ]');
+console.log(table.getElement('father')); // John
+console.log('[ DONE ]\n');
+
+// Изменяем элемент
+console.log('[ Change element with key "father" to "Johnathan"... ]');
+table.updateElement('father', 'Johnathan'); // John
+console.log('[ DONE ]\n');
+
+console.log('[ Read again element with key "father"... ]');
+console.log(table.getElement('father')); // Johnathan
+console.log('[ DONE ]\n');
+
+// Проверяем размер хеш-таблицы
+console.log('[ Getting table size... ]');
+console.log(table.getSize()); // 3
+console.log('[ DONE ]\n');
+
+// Удаляем элемент
+console.log('[ Delete element with key "father"... ]');
+table.removeElement('father');
+console.log('[ DONE ]\n');
+
+console.log('[ Read element with key "father"... ]');
+console.log(table.getElement('father')); // null
+console.log('[ DONE ]\n');
+
+// Проверяем размер хеш-таблицы
+console.log('[ Getting table size... ]');
+console.log(table.getSize()); // 2
+console.log('[ DONE ]\n');
+
+// Выводим содержимое таблицы
+console.log('[ Getting table contents ... ]');
+table.printElements();
+console.log('[ DONE ]\n');
+
+console.log('[ FINISH ]');

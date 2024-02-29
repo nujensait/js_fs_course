@@ -95,6 +95,19 @@ class BinaryTree {
     }
 
     /**
+     * Находит минимальное значение в дереве, начиная с заданного узла
+     * @param node Узел, с которого начинается поиск минимума
+     * @returns TreeNode Узел с минимальным значением
+     */
+    findMin(node) {
+        let current = node;
+        while (current.left) {
+            current = current.left;
+        }
+        return current;
+    }
+
+    /**
      * удаление узла по значению
      * @param value
      * @returns {boolean}

@@ -90,6 +90,19 @@ class BinaryTree {
     }
 
     /**
+     * Находит минимальное значение в дереве, начиная с заданного узла
+     * @param node Узел, с которого начинается поиск минимума
+     * @returns TreeNode Узел с минимальным значением
+     */
+    private findMin(node: TreeNode): TreeNode {
+        let current = node;
+        while (current.left) {
+            current = current.left;
+        }
+        return current;
+    }
+
+    /**
      * удаление узла по значению
      * @param number value
      * @returns {boolean}
@@ -196,3 +209,58 @@ class TreeNode {
         this.right = null;
     }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Пример использования
+
+console.log('[ START ]\n');
+
+// строим дерево
+console.log('[ Building tree... ]');
+const tree = new BinaryTree();
+tree.insert(3);
+tree.insert(1);
+tree.insert(2);
+tree.insert(3);
+tree.insert(5);
+tree.insert(4);
+tree.insert(4);
+tree.insert(6);
+console.log('[ DONE ]\n');
+
+// считаем высоту дерева
+console.log('[ Calc tree height ... ]');
+let treeHeight: number = tree.height();
+console.log('Tree height: ' + treeHeight);
+console.log('[ DONE ]\n');
+
+// находим/выводим узел с указанным значением
+console.log('[ Find tree element "6"... ]');
+console.log(tree.find(6));
+console.log('[ DONE ]\n');
+
+// удаляем элемент
+console.log('[ Delete tree element "6"... ]');
+console.log(tree.remove(6));
+console.log('[ DONE ]\n');
+
+// проверяем: удаленный элемент теперь не находится
+console.log('[ Find tree element "6"... ]');
+console.log(tree.find(6));
+console.log('[ DONE ]\n');
+
+// меняем значение элемиента "3" на "8"
+console.log('[ Update tree element value from "3" to "8"... ]');
+console.log(tree.update(3, 8));
+console.log('[ DONE ]\n');
+
+// проверяем: старый элемент теперь не находится, новый - находится
+console.log('[ Find tree element "3"... ]');
+console.log(tree.find(3));
+console.log('[ DONE ]\n');
+
+console.log('[ Find tree element "8"... ]');
+console.log(tree.find(8));
+console.log('[ DONE ]\n');
+
+console.log('[ FINISH ]');
