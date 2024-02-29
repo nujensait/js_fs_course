@@ -10,3 +10,6 @@
 - Использовать настройки ``strict`` и ``noImplicitAny``. 
 - Избегать утверждения типов (операторы ``as`` и ``non-null assertion``).
 3) Изучить структуру [tsconfig](https://www.typescriptlang.org/tsconfig).
+
+## Решение
+см. файл [solution.ts](solution.ts)
